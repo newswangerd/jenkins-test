@@ -18,7 +18,7 @@ pipeline {
       always {
         junit 'build/reports/**/*.xml'
       }
-      fail {
+      failure {
         echo 'I dun derped'
       }
     }
