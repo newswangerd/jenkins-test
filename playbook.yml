@@ -1,0 +1,15 @@
+- hosts: localhost
+  tasks:
+    - name: install something
+      yum:
+        name: hello
+        state: present
+      register: result
+
+    - debug: var=result
+
+    - name: remove something
+      yum:
+        name: hello
+        state: remove
+        

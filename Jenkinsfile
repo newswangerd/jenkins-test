@@ -1,25 +1,7 @@
 pipeline {
-    agent { docker 'python:3.5.1' }
+    agent { docker 'williamyeh/ansible:centos7' }
     stages {
-        stage('build') {
-            steps {
-                sh 'python --version'
-                sh 'python hello.py'
-            }
-        }
-
-        stage('test'){
-          steps {
-            sh 'python fail.py'
-          }
-        }
-    }
-    post {
-      always {
-        junit 'build/reports/**/*.xml'
+      stage('test'){
+        sh 'ansible-playbook playbook.yml'
       }
-      failure {
-        echo 'I dun derped'
-      }
-    }
 }
