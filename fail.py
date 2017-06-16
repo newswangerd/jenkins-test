@@ -1,4 +1,9 @@
+
+
 from __future__ import print_function
 import sys
-print('I derped', file=sys.stderr)
-print("i didn't derp")
+
+def eprint(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)
+
+eprint("fail")
