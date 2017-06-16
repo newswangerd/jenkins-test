@@ -6,6 +6,7 @@ pipeline {
   stages {
     stage('test'){
       steps {
+        sh 'su'
         sh 'pwd'
         sh 'ls'
         sh 'python test.py'
