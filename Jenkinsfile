@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('test'){
       steps {
+        sh 'python test.py'
         sh 'ansible-playbook playbook.yml'
       }
     }
