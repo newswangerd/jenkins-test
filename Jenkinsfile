@@ -7,7 +7,7 @@ pipeline {
         sh 'ls'
         sh 'python test.py'
         sh 'mkdir test'
-        # sh 'ansible-playbook playbook.yml'
+        sh 'ansible-playbook playbook.yml'
       }
     }
   }
