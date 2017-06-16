@@ -7,5 +7,11 @@ pipeline {
                 sh 'python hello.py'
             }
         }
+
+        stage('test'){
+          steps {
+            sh 'python fail.py'
+          }
+        }
     }
 }
