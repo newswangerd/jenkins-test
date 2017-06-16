@@ -4,4 +4,5 @@ pipeline {
       stage('test'){
         sh 'ansible-playbook playbook.yml'
       }
+    }
 }
