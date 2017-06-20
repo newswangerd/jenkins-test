@@ -5,6 +5,7 @@ pipeline {
   }
   stages {
     stage('test'){
+      steps {
         ansiblePlaybook("./playbook.yml")
       }
     }
