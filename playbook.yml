@@ -23,3 +23,9 @@
     assert:
       that:
         - true
+
+  - name: get list of changed files
+    shell: "git diff --name-only {{ lookup('env', 'GIT_PREVIOUS_SUCCESSFUL_COMMIT') }}"
+    register: git_diff
+
+  - debug: var=git_diff
