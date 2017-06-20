@@ -18,3 +18,8 @@
   tasks:
   - name: install something
     shell: "echo 'hello world'"
+
+  - name: test assert
+    assert:
+      that:
+        - false
