@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker 'williamyeh/ansible:centos7' }
+  agent any
   environment {
     HOME = '/tmp'
   }
