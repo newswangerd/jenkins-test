@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('test'){
       steps {
-        sh "echo $GIT_COMMIT"
+        echo ${env.JENKINS_URL}
         ansiblePlaybook("./playbook.yml")
       }
     }
