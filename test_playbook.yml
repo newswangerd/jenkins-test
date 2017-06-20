@@ -1,0 +1,10 @@
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: pull repo
+      git:
+        repo: https://github.com/newswangerd/jenkins-test.git
+        dest: /Users/dnewswan/code/tmp/jenkins
+      register: results
+
+    - debug: var=results

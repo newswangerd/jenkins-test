@@ -17,7 +17,7 @@
   connection: local
   tasks:
   - name: install something
-    shell: "echo 'hello world'"
+    shell: "echo 'hello worl'"
 
   - name: test assert
     assert:
