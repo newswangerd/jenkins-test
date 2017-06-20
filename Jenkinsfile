@@ -6,8 +6,8 @@ pipeline {
   stages {
     stage('test'){
       steps {
+        sh "echo $GIT_COMMIT"
         ansiblePlaybook("./playbook.yml")
-        sh "echo $GIT_PREVIOUS_SUCCESSFUL_COMMIT"
       }
     }
   }
