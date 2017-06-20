@@ -22,4 +22,4 @@
   - name: test assert
     assert:
       that:
-        - false
+        - true
